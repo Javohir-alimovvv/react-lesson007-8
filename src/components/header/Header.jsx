@@ -43,7 +43,7 @@ const Header = () => {
                     <div className="header__bottom__content">
                         <HiOutlineMenuAlt3 onClick={toggleSidebar} className='menu__saidbar__icon' />
                         <Link to={"/"}><img src={logo} alt="Logoo" /></Link>
-                        <button className='katolog__btn'><RiMenu2Fill className='menu__icon' />Каталог</button>
+                        <Link to={"/catalog"}><button className='katolog__btn'><RiMenu2Fill className='menu__icon' />Каталог</button></Link>
                         <form className='form__content'>
                             <input className='input__search' type="text" placeholder='Поиск по товарам' />
                             <button className='btn__search'><FiSearch /></button>

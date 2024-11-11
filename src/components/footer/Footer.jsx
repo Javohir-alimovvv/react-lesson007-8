@@ -1,4 +1,4 @@
-import React, { Link, memo } from 'react'
+import React, { memo } from 'react'
 import "./Footer.scss"
 import lagativ from "../../assets/images/logativ4.png"
 import footerlogo from "../../assets/images/logo.png"

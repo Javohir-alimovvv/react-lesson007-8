@@ -1,4 +1,4 @@
-import React, {memo} from 'react'
+import React, {memo, useEffect} from 'react'
 import { Link } from "react-router-dom"
 import { FaChevronRight } from "react-icons/fa";
 import homeone from "../../assets/images/home1.png"
@@ -8,6 +8,10 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const Blog = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+   }, [])
+
   return (
     <>
 

@@ -79,6 +79,7 @@ const Category = () => {
                                 <img className='category__bottom__img' src={lampa6} alt="" />
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>

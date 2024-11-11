@@ -2,9 +2,13 @@ import "./Yetkazish.scss"
 import { Link } from "react-router-dom"
 import { FaChevronRight } from "react-icons/fa";
 import xarita from "../../assets/images/xarita.png"
-import { memo } from "react";
+import { memo, useEffect } from "react";
 
 const Yetkazish = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+   }, [])
   return (
     <>
 

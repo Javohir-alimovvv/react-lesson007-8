@@ -1,8 +1,12 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
 import { Link } from "react-router-dom"
 import { FaChevronRight } from "react-icons/fa";
 
 const Kafolat = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+   }, [])
   return (
     <>
     

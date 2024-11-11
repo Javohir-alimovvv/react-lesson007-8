@@ -207,9 +207,12 @@
         }
 
         &::-webkit-scrollbar {
-            width: 50px;
+            width: 10px;
             height: 6px;
+        }
+        &::-webkit-scrollbar-thumb{
             background: #ddd;
+            border-radius: 10px;
         }
     }
 }
