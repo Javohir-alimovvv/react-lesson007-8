@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import "./Catalog.scss"
-import axios from "axios";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router-dom"
 
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowLeftLong } from "react-icons/fa6";
 import logativone from "../../assets/images/logativ1.png"
 import logativtwo from "../../assets/images/logativ2.png"
 import logativtheree from "../../assets/images/logativ3.png"
@@ -13,36 +13,25 @@ import hometwo from "../../assets/images/home2.png"
 import hometheree from "../../assets/images/home3.png"
 import { BsArrowUpRight } from "react-icons/bs";
 
-
-
-const BASE_URL = "https://6731c7fa7aaf2a9aff120907.mockapi.io"
+import axios from "../../api";
+import { useFetch } from "../../hooks/useFetch";
 
 const Catalog = () => {
-  const [data, setData] = useState(null)
+  const { data } = useFetch(`/products`)
+
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
-
-  useEffect(() => {
-    axios
-      .get(`${BASE_URL}/lesson002`)
-      .then((res) => {
-        setData(res.data)
-        console.log(res.data)
-      })
-      .catch((err) => console.log(err))
-      .finally()
   }, [])
 
   const yorilgich = data?.map((pro) => (
     <div key={pro.id} className='category__bottom__card'>
       <div className='category__bottom__left__gr'>
         <h3 className='category__bottom__text'>{pro.title}</h3>
-        <button className='category__bottom__btn'>{pro.price}₽ <FaArrowRightLong /></button>
+        <button className='category__bottom__btn'>{pro.price} ₽ <FaArrowRightLong /></button>
       </div>
       <div className='category__bottom__img__box'>
-        <img className='category__bottom__img' src={pro.images[0]} alt="" />
+        <Link to={`/product/${pro.id}`}><img className='category__bottom__img' src={pro.url} alt="" /></Link>
       </div>
     </div>
   ))

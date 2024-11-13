@@ -25,6 +25,9 @@
             text-align: left;
             color: #454545;
             opacity: .3;
+            &:hover{
+                color: #00305f;
+            }
         }
 
         .about__icons {
