@@ -62,6 +62,12 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
+                <div className="container">
+                <form className='form__content'>
+                    <input className='input__search' type="text" placeholder='Поиск по товарам' />
+                    <button className='btn__search'><FiSearch /></button>
+                </form>
+                </div>
                 <div className="containeryuiug">
                     <div className={`saidbar ${isSidebarOpen ? 'open' : 'closed'}`}>
                         <ul className='header__top__lenks'>

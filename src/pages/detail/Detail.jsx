@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Detail.scss"
 import { useParams } from 'react-router-dom'
 import { useFetch } from "../../hooks/useFetch";
@@ -11,8 +11,8 @@ import { FaRegHeart } from "react-icons/fa";
 const Detail = () => {
   const { id } = useParams()
   const { data } = useFetch(`/products/${id}`)
-  console.log(data);
 
+  const [count, setCount] = useState(1)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -38,14 +38,15 @@ const Detail = () => {
                 <del className='detail__summa__box__two'>{data?.price2} 000 ₽</del>
               </div>
               <p className='description__text'>{data?.description}</p>
-              <div>
-                <div>
-                  <button>-</button>
-                  <p></p>
-                  <button>+</button>
+
+              <div className='counter__group'>
+                <div className='counter__group__box'>
+                  <button disabled={count === 1} onClick={() => setCount((p) => p - 1)} className='counter__group__btn'>-</button>
+                  <p className='count__value__text'>{count}</p>
+                  <button onClick={() => setCount((p) => p + 1)} className='counter__group__btntwo'>+</button>
                 </div>
-                <button>В корзину</button>
-                <button><FaRegHeart /></button>
+                <button className='counter__btn__shop'>В корзину</button>
+                <button className='counter__btn__heart'><FaRegHeart /></button>
               </div>
             </div>
           </div>

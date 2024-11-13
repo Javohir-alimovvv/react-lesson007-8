@@ -61,6 +61,7 @@
                 height: 100%;
             }
         }
+
         .detail__title {
             // font-family: Manrope;
             font-size: 40px;
@@ -70,14 +71,14 @@
             color: #454545;
             margin-bottom: 40px;
         }
-    
+
         .detail__summa__box {
             display: flex;
             align-items: center;
             gap: 16px;
             margin-bottom: 40px;
-    
-    
+
+
             .detail__summa__box__one {
                 font-family: Inter;
                 font-size: 40px;
@@ -87,7 +88,7 @@
                 text-align: left;
                 color: #101010;
             }
-    
+
             .detail__summa__box__two {
                 // font-family: Inter;
                 font-size: 18px;
@@ -99,7 +100,7 @@
                 margin-top: 12px;
             }
         }
-    
+
         .description__text {
             max-width: 607px;
             width: 100%;
@@ -111,7 +112,108 @@
             color: #4C4C4C;
             margin-bottom: 40px;
         }
-    }
 
-   
+        .counter__group {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 16px;
+
+            .counter__group__box {
+                width: 143px;
+                height: 52px;
+                border: 1px solid #E5E5E5;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .counter__group__btn {
+                    width: 52px;
+                    height: 52px;
+                    border: none;
+                    border-radius: 10px;
+                    font-size: 24px;
+                    text-align: center;
+
+                    &:hover {
+                        background: red;
+                    }
+                }
+
+                .counter__group__btntwo {
+                    width: 52px;
+                    height: 52px;
+                    border: none;
+                    border-radius: 10px;
+                    font-size: 24px;
+                    text-align: center;
+
+                    &:hover {
+                        background: green;
+                    }
+                }
+
+                .count__value__text {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 19.68px;
+                    text-align: right;
+                    color: #101010;
+                }
+            }
+
+            .counter__btn__shop {
+                width: 180px;
+                height: 52px;
+                border-radius: 10px;
+                background: #454545;
+                color: #FFFFFF;
+                // font-family: Inter;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19.68px;
+                &:hover{
+                    background: none;
+                    color: #454545;
+                }
+            }
+            .counter__btn__heart{
+                width: 52px;
+                height: 52px;
+                border-radius: 10px;
+                background: #F8F8F8;
+                border: transparent;
+                font-size: 28px;
+                color: #454545;
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1150px) {
+    .detail{
+        .ditail__group{
+            flex-direction: column;
+            .img__box{
+                height: 450px;
+              } 
+        }
+    }
+}
+@media (max-width: 450px) {
+    .detail{
+        .ditail__group{
+          .img__box{
+            height: auto;
+          }  
+          .counter__group{
+            flex-direction: column;
+            align-items: start;
+          }
+        }
+    }
 }
