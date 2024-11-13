@@ -62,8 +62,6 @@
     }
 }
 
-
-
 .header__bottom__content {
     width: 100%;
     height: auto;
@@ -349,6 +347,7 @@
     }
 
     .form__content {
+        display: block;
         display: flex;
     }
 
