@@ -78,7 +78,7 @@ const Header = () => {
                             <li className='header__top__lenks__items'><NavLink className='links' to={"/contact"}><span>Контакты</span></NavLink></li>
                             <li className='header__top__lenks__items'><NavLink className='links' to={"/blog"}><span>Блог</span></NavLink></li>
                         </ul>
-                        <button className='katolog__btn'><RiMenu2Fill className='menu__icon' />Каталог</button>
+                        <Link to={"/catalog"}><button className='katolog__btn'><RiMenu2Fill className='menu__icon' />Каталог</button></Link>
                         <nav className='navbar'>
                             <a className='nav__tel' href="tel:+998948152522"><span>+998 (94)-815-25-22</span></a>
                             <button className='nav__btn'>Заказать звонок</button>

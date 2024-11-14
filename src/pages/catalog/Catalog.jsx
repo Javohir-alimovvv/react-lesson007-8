@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import "./Catalog.scss"
 import { FaArrowRightLong } from "react-icons/fa6";
-import { Link } from "react-router-dom"
 
 import { FaArrowLeftLong } from "react-icons/fa6";
 import logativone from "../../assets/images/logativ1.png"
@@ -14,24 +13,33 @@ import hometheree from "../../assets/images/home3.png"
 import { BsArrowUpRight } from "react-icons/bs";
 
 import axios from "../../api";
-import { useFetch } from "../../hooks/useFetch";
+import { useFetch } from "../../hooks/useFetch"
+import Modul from "../../components/modul/Modul";
 
 const Catalog = () => {
   const { data } = useFetch(`/products`)
+  const [show, setShow] = useState(false)
+  const [selectedCard, setSelectedCard] = useState(null);
 
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
+  const handleCardClick = (id) => {
+    const card = data.find(item => item.id === id);
+    setSelectedCard(card);
+  };
+
+
   const yorilgich = data?.map((pro) => (
-    <div key={pro.id} className='category__bottom__card'>
+    <div key={pro.id}  onClick={() => handleCardClick(pro.id)} className='category__bottom__card'>
       <div className='category__bottom__left__gr'>
         <h3 className='category__bottom__text'>{pro.title}</h3>
         <button className='category__bottom__btn'>{pro.price} ₽ <FaArrowRightLong /></button>
       </div>
       <div className='category__bottom__img__box'>
-        <Link to={`/product/${pro.id}`}><img className='category__bottom__img' src={pro.url} alt="" /></Link>
+        <img className='category__bottom__img' src={pro.url} alt="" />
       </div>
     </div>
   ))
@@ -50,6 +58,12 @@ const Catalog = () => {
               yorilgich
             }
           </div>
+          {selectedCard && (
+            <Modul
+              data={selectedCard}
+              onClose={() => setSelectedCard(null)}
+            />
+          )}
         </div>
       </div>
       <div className="container">
