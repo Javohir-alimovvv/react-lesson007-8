@@ -28,16 +28,22 @@
         gap: 50px;
         padding: 30px 40px;
 
-
-        .modul__card__box {
-            max-width: 330px;
+        .mySwiper {
             width: 100%;
             height: 330px;
+            // padding: 0px 0px;
 
-            .modul__card__box__img {
+            .modul__card__box {
+                max-width: 330px;
                 width: 100%;
-                height: 100%;
+                height: 330px;
+
+                .modul__card__box__img {
+                    width: 100%;
+                    height: 100%;
+                }
             }
+
         }
 
         .modul__card__right {

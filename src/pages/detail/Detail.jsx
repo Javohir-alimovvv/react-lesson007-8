@@ -5,6 +5,7 @@ import { useFetch } from "../../hooks/useFetch";
 import { Link } from "react-router-dom"
 import { FaChevronRight } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
+import { useStateValue } from '../../context';
 
 
 
@@ -12,7 +13,9 @@ const Detail = () => {
   const { id } = useParams()
   const { data } = useFetch(`/products/${id}`)
 
-  const [count, setCount] = useState(1)
+  const [stite, despath] = useStateValue()
+  console.log(stite);
+  
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -41,9 +44,9 @@ const Detail = () => {
 
               <div className='counter__group'>
                 <div className='counter__group__box'>
-                  <button disabled={count === 1} onClick={() => setCount((p) => p - 1)} className='counter__group__btn'>-</button>
-                  <p className='count__value__text'>{count}</p>
-                  <button onClick={() => setCount((p) => p + 1)} className='counter__group__btntwo'>+</button>
+                  <button disabled={stite.count === 1} onClick={()=> despath({type: "DEC"})} className='counter__group__btn'>-</button>
+                  <p className='count__value__text'>{stite.count}</p>
+                  <button onClick={()=> despath({type: "INC"})} className='counter__group__btntwo'>+</button>
                 </div>
                 <button className='counter__btn__shop'>В корзину</button>
                 <button className='counter__btn__heart'><FaRegHeart /></button>
