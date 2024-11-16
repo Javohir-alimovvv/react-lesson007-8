@@ -8,11 +8,13 @@ import { IoMdStats } from "react-icons/io";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import React, { memo, useState } from 'react';
+import { useStateValue } from "../../context";
 
 
 const Header = () => {
 
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [stite, despath] = useStateValue()
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
@@ -35,7 +37,7 @@ const Header = () => {
                         </ul>
                         <nav className='navbar'>
                             <a className='nav__tel' href="tel:+998948152522"><span>+998 (94)-815-25-22</span></a>
-                            <button className='nav__btn'>Заказать звонок</button>
+                            <Link><button className='nav__btn'>Заказать звонок</button></Link>
                         </nav>
                     </div>
                 </div>
@@ -49,7 +51,10 @@ const Header = () => {
                             <button className='btn__search'><FiSearch /></button>
                         </form>
                         <div className='icons__group'>
-                            <FaRegHeart className='icon__group__icons' />
+                            <div className="heart__counter__box">
+                                <Link to={"/wishlist"}><FaRegHeart className='icon__group__icons__heart' /></Link>
+                                <p className="heart__counter__box__count">{stite.countwish}</p>
+                            </div>
                             <p className='icon__group__text'>Избранное</p>
                         </div>
                         <div className='icons__group'>
@@ -57,7 +62,7 @@ const Header = () => {
                             <p className='icon__group__text'>Сравнение</p>
                         </div>
                         <div className='icons__group'>
-                            <MdOutlineShoppingCart className='icon__group__icons' />
+                            <Link><MdOutlineShoppingCart className='icon__group__icons__shop' /></Link>
                             <p className='icon__group__text'>Корзина</p>
                         </div>
                     </div>

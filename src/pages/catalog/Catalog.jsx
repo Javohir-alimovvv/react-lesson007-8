@@ -14,35 +14,17 @@ import { BsArrowUpRight } from "react-icons/bs";
 
 import axios from "../../api";
 import { useFetch } from "../../hooks/useFetch"
-import Modul from "../../components/modul/Modul";
+import Product from "../../components/product/Product";
+
+
 
 const Catalog = () => {
   const { data } = useFetch(`/products`)
-  const [show, setShow] = useState(false)
-  const [selectedCard, setSelectedCard] = useState(null);
 
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-
-  const handleCardClick = (id) => {
-    const card = data.find(item => item.id === id);
-    setSelectedCard(card);
-  };
-
-
-  const yorilgich = data?.map((pro) => (
-    <div key={pro.id}  onClick={() => handleCardClick(pro.id)} className='category__bottom__card'>
-      <div className='category__bottom__left__gr'>
-        <h3 className='category__bottom__text'>{pro.title}</h3>
-        <button className='category__bottom__btn'>{pro.price} ₽ <FaArrowRightLong /></button>
-      </div>
-      <div className='category__bottom__img__box'>
-        <img className='category__bottom__img' src={pro.url} alt="" />
-      </div>
-    </div>
-  ))
 
   return (
     <>
@@ -53,17 +35,7 @@ const Catalog = () => {
             <h3 className='category__top__text'>Каталог</h3>
             <button className='category__top__btn'>Весь каталог <FaArrowRightLong /></button>
           </div>
-          <div className='category__bottom'>
-            {
-              yorilgich
-            }
-          </div>
-          {selectedCard && (
-            <Modul
-              data={selectedCard}
-              onClose={() => setSelectedCard(null)}
-            />
-          )}
+          <Product data={data} />
         </div>
       </div>
       <div className="container">

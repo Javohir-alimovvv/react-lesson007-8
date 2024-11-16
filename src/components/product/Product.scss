@@ -1,0 +1,32 @@
+.category__icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .heart__icon__btn {
+        background: none;
+        border: none;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+
+        &:hover {
+            color: red;
+        }
+        .heard__ternory__icon{
+            color: red;
+        }
+    }
+
+    .shop__icon__btn {
+        background: none;
+        border: none;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+
+        &:hover {
+            color: green;
+        }
+    }
+}

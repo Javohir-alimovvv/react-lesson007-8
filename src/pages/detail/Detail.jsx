@@ -14,7 +14,6 @@ const Detail = () => {
   const { data } = useFetch(`/products/${id}`)
 
   const [stite, despath] = useStateValue()
-  console.log(stite);
   
 
   useEffect(() => {
