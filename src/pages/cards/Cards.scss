@@ -1,0 +1,278 @@
+.card__home__linea {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    margin-top: 76px;
+    margin-bottom: 40px;
+
+    .card__chevrons {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 9px;
+        margin-bottom: 15px;
+
+        .card__chevrons__link {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 21.86px;
+            text-align: left;
+            color: #454545;
+            opacity: .3;
+        }
+
+        .card__chevrons__link__icon {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21.86px;
+            text-align: left;
+            color: #454545;
+            opacity: .3;
+        }
+
+        .card__chevrons__text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 21.86px;
+            text-align: left;
+            color: #454545;
+        }
+
+        .card__chevrons__text__icon {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21.86px;
+            text-align: left;
+            color: #454545;
+        }
+    }
+
+    .card__title__text {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 70.4px;
+        text-align: left;
+        color: #454545;
+    }
+}
+
+.card__page {
+    width: 100%;
+    height: 384px;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background: #F2F2F2;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 36px 46px 40px 46px;
+    margin-bottom: 20px;
+    .card__page__top__item {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-bottom: 28px;
+        padding-left: 5px;
+
+        .card__page__top__item__text {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 21.86px;
+            text-align: left;
+            color: #454545;
+            opacity: .5;
+            cursor: pointer;
+
+            &:hover {
+                color: dodgerblue;
+            }
+        }
+
+        .text__nimadur {
+            margin-left: 80px;
+        }
+
+        .text__nimadurtwo {
+            margin-left: 180px;
+        }
+
+        .text__nimadurtheree {
+            margin-left: 253px;
+        }
+
+        .text__nimadurfour {
+            margin-left: 240px;
+        }
+    }
+
+    .card__overflov__box {
+        width: 100%;
+        height: 100%;
+        padding: 20px 4px 0px 4px;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        overflow-y: auto;
+        gap: 59px;
+
+
+        .card__page__box {
+            width: 100%;
+            height: 135px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+
+            .card__page__image__box {
+                max-width: 80px;
+                width: 100%;
+                height: 80px;
+                border-radius: 15px;
+                background: #FFFFFF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .card__page__image {
+                    width: 80%;
+                    height: 80%;
+                }
+            }
+
+            .card__title__gr {
+                display: flex;
+                align-items: start;
+                justify-content: start;
+                flex-direction: column;
+                gap: 22px;
+                margin-left: 37px;
+
+                .card__title__gr__top__text {
+                    width: 174px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 20.8px;
+                    text-align: left;
+                    color: #454545;
+                }
+
+                .card__page__about__price__group {
+                    display: flex;
+                    justify-content: start;
+                    gap: 20px;
+
+                    .card__page__about__price {
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 22px;
+                        text-align: left;
+                        color: #454545;
+                    }
+
+                    .card__page__about__price__del {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 22px;
+                        text-align: left;
+                        color: #454545;
+                        opacity: .5;
+                    }
+                }
+            }
+
+            .card__page__delete__desc {
+                max-width: 250px;
+                width: 100%;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20.8px;
+                text-align: left;
+                color: #454545;
+                margin-left: 64px;
+            }
+
+            .card__page__delete__desc__two {
+                max-width: 250px;
+                width: 100%;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20.8px;
+                text-align: left;
+                color: #454545;
+                margin-left: 74px;
+            }
+
+            .card__page__about__count__gr {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                margin-left: 45px;
+                margin-right: 40px;
+
+                .card__page__about__count__min {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 10px;
+                    border: none;
+                    font-size: 28px;
+
+                    &:hover {
+                        background: red;
+                    }
+                }
+
+                .card__page__about__count__value {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 10px;
+                    border: 1px solid #454545;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 21.86px;
+                    text-align: center;
+                    color: #454545;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .card__page__about__count__pil {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 10px;
+                    border: none;
+                    font-size: 24px;
+
+                    &:hover {
+                        background: green;
+                    }
+                }
+            }
+            .card__page__delete__btn{
+                border: none;
+                font-size: 28px;
+                color: #454545;
+                &:hover{
+                    background: none;
+                    color: red;
+                }
+            }
+        }
+        &::-webkit-scrollbar{
+            width: 3px;
+            height: 60px;
+            border-radius: 5px;
+            background: #454545;
+        }
+    }
+
+}

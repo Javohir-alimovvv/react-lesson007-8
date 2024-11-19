@@ -33,12 +33,13 @@ const Product = ({ data }) => {
                     </button>
 
 
-                    <button className="shop__icon__btn"><MdOutlineShoppingCart /></button>
-                    {/* <MdShoppingCart /> */}
+                    <button onClick={() => dispatch({ type: "ADD_CARD", payload: pro })} className="shop__icon__btn">
+                        {state.card?.some(p => p.id === pro.id) ? <MdShoppingCart className='card__icon'/> : <MdOutlineShoppingCart />}</button>
+
                 </div>
             </div>
             <div className='category__bottom__img__box'>
-                <img onClick={() => handleCardClick(pro.id)} className='category__bottom__img' src={pro.url} alt="" />
+                <img onClick={() => handleCardClick(pro.id)} className='category__bottom__img' src={pro.image} alt="" />
             </div>
         </div>
     ))

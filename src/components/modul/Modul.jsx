@@ -40,17 +40,17 @@ const Modul = ({ data, onClose }) => {
             >
               <SwiperSlide>
                 <div className='modul__card__box'>
-                  <img className='modul__card__box__img' src={data?.url} alt="" />
+                  <img className='modul__card__box__img' src={data?.image} alt="" />
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className='modul__card__box'>
-                  <img className='modul__card__box__img' src={data?.url} alt="" />
+                  <img className='modul__card__box__img' src={data?.image} alt="" />
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className='modul__card__box'>
-                  <img className='modul__card__box__img' src={data?.url} alt="" />
+                  <img className='modul__card__box__img' src={data?.image} alt="" />
                 </div>
               </SwiperSlide>
             </Swiper>
@@ -63,7 +63,7 @@ const Modul = ({ data, onClose }) => {
         </div>
       </div>
       <div className='modul__card__box'>
-        <img className='modul__card__box__img' src={data?.url} alt="" />
+        <img className='modul__card__box__img' src={data?.image} alt="" />
       </div>
     </>
   )

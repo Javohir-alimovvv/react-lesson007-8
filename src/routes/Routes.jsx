@@ -12,6 +12,7 @@ import Errorlar from '../pages/errorlar/Errorlar'
 import Detail from '../pages/detail/Detail'
 import Layout from '../pages/layout/Layout'
 import Wishlist from '../pages/wishlist/Wishlist'
+import Cards from '../pages/cards/Cards'
 
 
 const Routesone = () => {
@@ -30,6 +31,7 @@ const Routesone = () => {
           <Route path='/catalog' element={<Catalog />} />
           <Route path='/product/:id' element={<Detail />} />
           <Route path='/wishlist' element={<Wishlist />} />
+          <Route path='/cards' element={<Cards />} />
         </Route>
         <Route path='*' element={<Errorlar />} />
       </Routes>

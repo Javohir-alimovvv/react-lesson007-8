@@ -19,7 +19,7 @@ import Product from "../../components/product/Product";
 
 
 const Catalog = () => {
-  const { data } = useFetch(`/products`)
+  const { data } = useFetch(`/alimovapi`)
 
 
   useEffect(() => {

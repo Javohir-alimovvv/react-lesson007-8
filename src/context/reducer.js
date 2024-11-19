@@ -11,13 +11,45 @@ export const reducer = (state, action) => {
             let index = state.wishlist.findIndex(pro => pro.id === action.payload.id)
             if (index < 0) {
                 result = { ...state, wishlist: [...state.wishlist, action.payload] }
-                localStorage.getItem("storage", JSON.stringify(result))
+                localStorage.setItem("storage", JSON.stringify(result))
                 return result
             } else {
                 result = { ...state, wishlist: state.wishlist.filter(pro => pro.id !== action.payload.id) }
-                localStorage.getItem("storage", JSON.stringify(result))
+                localStorage.setItem("storage", JSON.stringify(result))
                 return result
             }
+        case "ADD_CARD":
+            let cardIndex = state.card.findIndex(pro => pro.id === action.payload.id)
+            if (cardIndex < 0) {
+                result = { ...state, card: [...state.card, { ...action.payload, amount: 1 }] }
+                localStorage.setItem("storage", JSON.stringify(result))
+                return result
+            } else {
+                result = {
+                    ...state, card: state.card.map((pro, inx) => (
+                        cardIndex === inx ? { ...pro, amount: pro.amount + 1 } : pro
+                    ))
+                }
+                localStorage.setItem("storage", JSON.stringify(result))
+                return state
+            }
+        case "DEC_CARD":
+            let decIndex = state.card.findIndex(pro => pro.id === action.payload.id)
+            result = {
+                ...state, card: state.card.map((pro, inx) => (
+                    decIndex === inx ? { ...pro, amount: pro.amount - 1 } : pro
+                ))
+            }
+            localStorage.setItem("storage", JSON.stringify(result))
+            return state
+        case "REMOVE_CARD":
+            result = {...state, card: state.card.filter(item=> item.id !== action.payload.id)}
+            localStorage.setItem("storage", JSON.stringify(result))
+            return result
+        case "CLEAR_CARD":
+            result = { ...state, card: [] }
+            localStorage.setItem("storage", JSON.stringify(result))
+            return result
         case "INC":
             return { ...state, count: state.count + 1 }
         case "DEC":

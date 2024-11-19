@@ -44,7 +44,7 @@ const Header = () => {
                 <div className="container">
                     <div className="header__bottom__content">
                         <HiOutlineMenuAlt3 onClick={toggleSidebar} className='menu__saidbar__icon' />
-                        <Link to={"/"}><img src={logo} alt="Logoo" /></Link>
+                        <Link to={"/"}><img className="logo" src={logo} alt="Logoo" /></Link>
                         <Link to={"/catalog"}><button className='katolog__btn'><RiMenu2Fill className='menu__icon' />Каталог</button></Link>
                         <form className='form__content'>
                             <input className='input__search' type="text" placeholder='Поиск по товарам' />
@@ -62,7 +62,7 @@ const Header = () => {
                             <p className='icon__group__text'>Сравнение</p>
                         </div>
                         <div className='icons__group'>
-                            <Link><MdOutlineShoppingCart className='icon__group__icons__shop' /></Link>
+                            <Link to={"/cards"}><MdOutlineShoppingCart className='icon__group__icons__shop' /></Link>
                             <p className='icon__group__text'>Корзина</p>
                         </div>
                     </div>
@@ -83,7 +83,7 @@ const Header = () => {
                             <li className='header__top__lenks__items'><NavLink className='links' to={"/contact"}><span>Контакты</span></NavLink></li>
                             <li className='header__top__lenks__items'><NavLink className='links' to={"/blog"}><span>Блог</span></NavLink></li>
                         </ul>
-                        <Link to={"/catalog"}><button className='katolog__btn'><RiMenu2Fill className='menu__icon' />Каталог</button></Link>
+                        <Link to={"/catalog"} className="catalog__btn__content"><button className='katolog__btn'><RiMenu2Fill className='menu__icon' />Каталог</button></Link>
                         <nav className='navbar'>
                             <a className='nav__tel' href="tel:+998948152522"><span>+998 (94)-815-25-22</span></a>
                             <button className='nav__btn'>Заказать звонок</button>

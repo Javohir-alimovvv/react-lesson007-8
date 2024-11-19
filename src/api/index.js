@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const mainURL = axios.create({
-    baseURL: "https://672f3e4f229a881691f24b98.mockapi.io"
+    baseURL: "https://6731c7fa7aaf2a9aff120907.mockapi.io"
 })
 
 export default mainURL
