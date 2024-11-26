@@ -1,0 +1,43 @@
+.create__blog{
+    margin-top: 50px;
+    margin-left: 50px;
+    .create__blog__text{
+        font-size: 44px;
+        color: dodgerblue;
+        margin-bottom: 50px;
+    }
+    .create__blog__component{
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        gap: 18px;
+        .create__blog__component__items{
+            width: 400px;
+            height: 52px;
+            border-radius: 10px;
+            border: 1px solid #a3a0a099;
+            outline: none;
+            font-size: 18px;
+            color: #202020;
+            padding: 0px 16px;
+            background: none;
+        }
+        .create__blog__component__btn{
+            width: 400px;
+            height: 52px;
+            border-radius: 100px;
+            background: green;
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+
+            &:hover{
+                background: none;
+                color: green;
+                border-color: green;
+            
+            }
+        }
+    }
+}

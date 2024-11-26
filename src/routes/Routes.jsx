@@ -13,6 +13,10 @@ import Detail from '../pages/detail/Detail'
 import Layout from '../pages/layout/Layout'
 import Wishlist from '../pages/wishlist/Wishlist'
 import Cards from '../pages/cards/Cards'
+import Admin from '../pages/admin/Admin'
+import Create from '../pages/admin/create/Create'
+import Manage from '../pages/admin/manage/Manage'
+
 
 
 const Routesone = () => {
@@ -34,6 +38,10 @@ const Routesone = () => {
           <Route path='/cards' element={<Cards />} />
         </Route>
         <Route path='*' element={<Errorlar />} />
+        <Route path='/admin' element={<Admin />} >
+          <Route path='create' element={<Create />} />
+          <Route path='manage' element={<Manage />} />
+        </Route>
       </Routes>
 
 

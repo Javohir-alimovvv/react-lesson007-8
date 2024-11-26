@@ -5,6 +5,7 @@ import { useStateValue } from "../../context"
 import { MdDelete } from "react-icons/md";
 import { Link } from 'react-router-dom'
 import { FaChevronRight } from "react-icons/fa";
+import Buyurtma from '../../components/buyurtma/Buyurtma';
 
 
 const Cards = () => {
@@ -76,6 +77,7 @@ const Cards = () => {
 
       </div>
 
+      <Buyurtma />
     </>
   )
 }

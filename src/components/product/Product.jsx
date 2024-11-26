@@ -8,10 +8,11 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaHeart } from "react-icons/fa6";
 import { MdShoppingCart } from "react-icons/md";
 import "./Product.scss"
-
+import { BsFillTrashFill } from "react-icons/bs";
+import axios from "../../api"
 import Modul from '../modul/Modul';
 
-const Product = ({ data }) => {
+const Product = ({ data, admin }) => {
     const [show, setShow] = useState(false)
     const [selectedCard, setSelectedCard] = useState(null);
     const [state, dispatch] = useStateValue()
@@ -21,6 +22,13 @@ const Product = ({ data }) => {
         setSelectedCard(card);
     };
 
+    const deletProduct = (id) => {
+        axios
+            .delete(`/alimovapi/${id}`)
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
+            .finally()
+    }
     const yorilgich = data?.map((pro) => (
         <div key={pro.id} className='category__bottom__card'>
             <div className='category__bottom__left__gr'>
@@ -33,9 +41,13 @@ const Product = ({ data }) => {
                     </button>
 
 
-                    <button onClick={() => dispatch({ type: "ADD_CARD", payload: pro })} className="shop__icon__btn">
-                        {state.card?.some(p => p.id === pro.id) ? <MdShoppingCart className='card__icon'/> : <MdOutlineShoppingCart />}</button>
-
+                    {
+                        admin ?
+                            <button onClick={()=> deletProduct(pro.id)}><BsFillTrashFill /></button>
+                            :
+                            <button onClick={() => dispatch({ type: "ADD_CARD", payload: pro })} className="shop__icon__btn">
+                                {state.card?.some(p => p.id === pro.id) ? <MdShoppingCart className='card__icon' /> : <MdOutlineShoppingCart />}</button>
+                    }
                 </div>
             </div>
             <div className='category__bottom__img__box'>

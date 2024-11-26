@@ -1,0 +1,188 @@
+.buyurtma {
+    width: 100%;
+    height: auto;
+    padding: 45px 94px 45px 48px;
+    background: #F2F2F2;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-bottom: 58px;
+
+    .buyurtma__title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 35.2px;
+        text-align: left;
+        color: #454545;
+        margin-bottom: 31px;
+    }
+
+    .buyurtma__reg__group {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 37px;
+
+        .buyurtma__reg__group__content {
+            width: 373px;
+            height: 49px;
+            border-radius: 100px;
+            outline: none;
+            border: 1px solid #454545;
+            background: none;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20.8px;
+            text-align: left;
+            color: #454545;
+            padding: 20px;
+        }
+    }
+
+    .buyurtma__lenia {
+        width: 100%;
+        height: 1px;
+        border-radius: 6px;
+        background: #000000;
+        opacity: .1;
+        margin-bottom: 37px;
+    }
+
+    .buyurtma__adres {
+        max-width: 767px;
+        width: 100%;
+        height: 49px;
+        border-radius: 100px;
+        outline: none;
+        border: 1px solid #454545;
+        background: none;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20.8px;
+        text-align: left;
+        color: #454545;
+        padding: 20px;
+        margin-bottom: 31px;
+    }
+
+    .buyurtma__cament {
+        max-width: 767px;
+        width: 100%;
+        height: 150px;
+        border-radius: 26px;
+        outline: none;
+        border: 1px solid #454545;
+        background: none;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20.8px;
+        text-align: left;
+        color: #454545;
+        padding: 20px;
+    }
+}
+
+.tolov {
+    width: 100%;
+    height: auto;
+    padding: 45px 94px 45px 48px;
+    background: #F2F2F2;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-bottom: 58px;
+
+    .buyurtma__title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 35.2px;
+        text-align: left;
+        color: #454545;
+        margin-bottom: 31px;
+    }
+
+    .tolov__top__content {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-bottom: 69px;
+        gap: 40px;
+
+        .tolov__top__content__gr {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 3px;
+
+            .tolov__top__content__text {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20.8px;
+                text-align: left;
+                color: #454545;
+                opacity: .5;
+            }
+        }
+    }
+
+    .tolov__price {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 26.4px;
+        text-align: left;
+        color: #454545;
+        margin-bottom: 28px;
+    }
+
+    .tolov__sucsses {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 24px;
+
+        .tolov__sucsses {
+            width: 324px;
+            height: 50px;
+            background: #454545;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 21.86px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background: none;
+                color: #454545;
+                border-color: #454545;
+                transition: .3s;
+            }
+        }
+
+        .tolov__sucsses__gr {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            .radio {
+                width: 16px;
+                height: 16px;
+            }
+
+            .tolov__sucsses__gr__text {
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 15.6px;
+                text-align: left;
+                color: #454545;
+                opacity: .5;
+            }
+        }
+    }
+}
