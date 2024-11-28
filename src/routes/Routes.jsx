@@ -16,6 +16,8 @@ import Cards from '../pages/cards/Cards'
 import Admin from '../pages/admin/Admin'
 import Create from '../pages/admin/create/Create'
 import Manage from '../pages/admin/manage/Manage'
+import Auth from '../pages/auth/Auth'
+import Login from '../pages/login/Login'
 
 
 
@@ -38,9 +40,12 @@ const Routesone = () => {
           <Route path='/cards' element={<Cards />} />
         </Route>
         <Route path='*' element={<Errorlar />} />
-        <Route path='/admin' element={<Admin />} >
-          <Route path='create' element={<Create />} />
-          <Route path='manage' element={<Manage />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/' element={<Auth />}>
+          <Route path='admin' element={<Admin />} >
+            <Route path='create' element={<Create />} />
+            <Route path='manage' element={<Manage />} />
+          </Route>
         </Route>
       </Routes>
 

@@ -1,0 +1,53 @@
+.login {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 50px;
+
+    .login__text {
+        font-size: 48px;
+        color: dodgerblue;
+    }
+
+    .login__form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-direction: column;
+
+        .login__form__input {
+            width: 400px;
+            height: 50px;
+            border-radius: 10px;
+            background: none;
+            border: 1px solid #7c7c7c;
+            color: #454444;
+            outline: none;
+            font-size: 18px;
+            padding: 0px 16px;
+        }
+
+        .login__form__btn {
+            width: 400px;
+            height: 50px;
+            border-radius: 50px;
+            background: dodgerblue;
+            color: white;
+            font-size: 18px;
+            border: 1px solid transparent;
+            transition: .3s;
+
+            &:hover {
+                background: none;
+                border-color: dodgerblue;
+                color: dodgerblue;
+                transition: .3s;
+            }
+        }
+    }
+}

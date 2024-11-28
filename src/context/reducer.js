@@ -2,7 +2,8 @@ export const initialState = JSON.parse(localStorage.getItem("storage")) || {
     count: 1,
     wishlist: [],
     countwish: 0,
-    card: []
+    card: [],
+    token: null
 }
 export const reducer = (state, action) => {
     let result = state
@@ -58,6 +59,11 @@ export const reducer = (state, action) => {
             return { ...state, count: state.count + 1 }
         case "DEC_WISHLIST":
             return { ...state, count: state.count - 1 }
+        case "ADD_TOKEN":
+            result = {...state, token: action.payload}
+            localStorage.setItem("storage", JSON.stringify(result))
+            return result
+        
         default:
             return state
     }

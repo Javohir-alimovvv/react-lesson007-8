@@ -11,9 +11,14 @@ const Manage = () => {
   return (
     <>
 
+
       <div className='manage__panel'>
-        <h2>Manage Products</h2>
-        <Product admin={true} data={data} />
+        <h2 className='manage__panel__text'>Manage Products</h2>
+        <div className="container">
+          <div className='category'>
+            <Product admin={true} data={data} />
+          </div>
+        </div>
       </div>
 
     </>
