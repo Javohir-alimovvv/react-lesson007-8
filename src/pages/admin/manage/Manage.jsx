@@ -2,9 +2,11 @@ import React from 'react'
 import "./Manage.scss"
 import { useFetch } from '../../../hooks/useFetch'
 import Product from '../../../components/product/Product'
+import { useStateValue } from '../../../context'
 
 const Manage = () => {
-  const { data } = useFetch(`/alimovapi`)
+  const [state] = useStateValue()
+  const { data } = useFetch(`/alimovapi`, {}, [state.reload])
 
 
 

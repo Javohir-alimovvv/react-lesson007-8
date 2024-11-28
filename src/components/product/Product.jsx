@@ -25,7 +25,9 @@ const Product = ({ data, admin }) => {
     const deletProduct = (id) => {
         axios
             .delete(`/alimovapi/${id}`)
-            .then(res => console.log(res))
+            .then(res => {
+                dispatch({type: "RELOAD"})
+            })
             .catch(err => console.log(err))
             .finally()
     }

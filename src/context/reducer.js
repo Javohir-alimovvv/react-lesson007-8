@@ -3,7 +3,8 @@ export const initialState = JSON.parse(localStorage.getItem("storage")) || {
     wishlist: [],
     countwish: 0,
     card: [],
-    token: null
+    token: null,
+    reload: false
 }
 export const reducer = (state, action) => {
     let result = state
@@ -63,7 +64,8 @@ export const reducer = (state, action) => {
             result = {...state, token: action.payload}
             localStorage.setItem("storage", JSON.stringify(result))
             return result
-        
+        case "RELOAD":
+            return {...state, reload: !state.reload}
         default:
             return state
     }
