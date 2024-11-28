@@ -29,6 +29,18 @@
                     color: #c5c3c3;
                 }
             }
+
+            .log__out__btn {
+                background: none;
+                border: none;
+                font-size: 24px;
+                color: white;
+                align-items: center;
+
+                &:hover {
+                    color: #c5c3c3;
+                }
+            }
         }
     }
 }

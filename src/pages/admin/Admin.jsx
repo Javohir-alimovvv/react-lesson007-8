@@ -1,8 +1,18 @@
 import React from 'react'
 import "./Admin.scss"
-import { Outlet, NavLink } from 'react-router-dom'
+import { Outlet, NavLink, useNavigate } from 'react-router-dom'
 import { TbHomeHand } from "react-icons/tb";
 const Admin = () => {
+
+    const navigate = useNavigate()
+    const handleLogOut = () => {
+        const storage = JSON.parse(localStorage.getItem("storage"))
+        delete storage.token
+        localStorage.setItem("storage", JSON.stringify(storage))
+        navigate("/")
+    }
+
+
     return (
         <>
 
@@ -19,6 +29,7 @@ const Admin = () => {
                         <li className='admin__saidbar__content__item'>
                             <NavLink to={"/admin/manage"}><span>Manage Products</span></NavLink>
                         </li>
+                        <button className='log__out__btn' onClick={handleLogOut}>Log Out</button>
                     </ul>
                 </div>
                 <div>
